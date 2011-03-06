@@ -1,4 +1,12 @@
 Bummer::Application.routes.draw do
+  get "products/new"
+
+  get "products/index"
+
+  get "products/delete"
+
+  get "products/select"
+
   match '/define_products', :to => 'define_products#show'
   #get "define_products"
   
