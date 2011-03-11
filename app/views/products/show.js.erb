@@ -1,0 +1,9 @@
+<% if(@prev_selected)  
+      @product = @prev_selected %>
+  $(".product_list_element_selected")
+    .parent().html("<%= escape_javascript(render :partial => 'unselected_product')%>")
+<% end 
+@product = @new_selected
+%>
+$("#" + <%=@product.id%>).parent()
+  .html("<%= escape_javascript(render :partial => 'selected_product') %>")

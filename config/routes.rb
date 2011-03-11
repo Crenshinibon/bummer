@@ -1,14 +1,7 @@
 Bummer::Application.routes.draw do
-  get "products/new"
-
-  get "products/index"
-
-  get "products/delete"
-
-  get "products/select"
-
+  resources :products
   match '/define_products', :to => 'define_products#show'
-  #get "define_products"
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

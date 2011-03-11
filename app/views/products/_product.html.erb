@@ -1,0 +1,10 @@
+<div id="list_element_id">
+  <% 
+  @product = product
+  if @selected == product 
+  %>
+  <%= render 'products/selected_product' %>
+  <% else %>
+  <%= render 'products/unselected_product' %>
+  <% end %>
+</div>

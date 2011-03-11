@@ -1,0 +1,7 @@
+<div id="products_list">
+  <% if @products.empty? %>
+    <p>No products defined yet.</p>
+  <% else %> 
+    <%= render @products %> 
+  <% end %>
+</div>
