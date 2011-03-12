@@ -1,6 +1,6 @@
-<div id="list_element_id">
-  <div class="product_list_element_selected">
-    <%= text_field(:product, :name, :size => "18")%>
-    <%= hidden_field(:product, :id) %>
-  </div>
+<div id="<%= @product.id %>" class="product_list_element_selected">
+  <%= text_field(:product, :name, 
+    :size => "18", 
+    :onkeypress => "uploadProductName(event, this, " + @product.id.to_s + ")" ) %>
+  <%= hidden_field(:product, :id) %>
 </div>

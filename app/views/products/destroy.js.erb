@@ -1,0 +1,11 @@
+$("#" + <%=@to_delete.id%>).parent()
+  .fadeOut('300', function(){ $(this).remove() });
+
+<%if ( @to_select )
+  @product = @to_select
+  %>
+$("#" + <%=@to_select.id%>).parent()
+  .html("<%= escape_javascript(render :partial => 'selected_product') %>");
+<% else %>
+$("#products_list").html("No Products defined yet!");
+<% end %>

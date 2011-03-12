@@ -1,0 +1,11 @@
+<% if @products.size == 1 %>
+  $("#products_list").children().remove();
+<% else 
+      @product = @selected %>
+  $(".product_list_element_selected")
+    .parent().html("<%= escape_javascript(render :partial => 'unselected_product')%>");
+<% end 
+@product = @products.last
+%>
+$("#products_list")
+  .append("<%= escape_javascript(render :partial => 'created_product') %>");

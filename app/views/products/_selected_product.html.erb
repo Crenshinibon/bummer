@@ -1,6 +1,6 @@
-<div class="product_list_element_selected">
-  <div class="delete_image_div">
-    <%= image_tag("DeleteButton24.png", :alt => "") %>
+<div id="<%= @product.id %>" class="product_list_element_selected" ondblclick="edit(<%= @product.id %>)">
+  <div class="delete_image_div" onclick="remove(<%= @product.id %>)">
+    <%= image_tag("DeleteButton24.png", :alt => "", :mouseover => "DeleteButtonHover24.png") %>
     <%= hidden_field(:product, :id) %>
   </div><%= @product.name %>
 </div>

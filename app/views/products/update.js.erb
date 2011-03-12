@@ -1,0 +1,2 @@
+$("#" + <%=@product.id%>).parent()
+  .html("<%= escape_javascript(render :partial => 'selected_product') %>");
