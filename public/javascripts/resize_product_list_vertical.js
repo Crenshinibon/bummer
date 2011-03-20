@@ -17,7 +17,7 @@ function updateArea() {
 function getHeight() {
     var height = 0;
 
-    var idArray = ['#products_header', '#products_buttons']
+    var idArray = ['#products_header', '#products_buttons'];
     for (var i = 0; i < idArray.length; i++) {
         height += $(idArray[i]).outerHeight();
     }
