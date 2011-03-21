@@ -1,21 +1,21 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-var select = function(id) {
+function select(id) {
   $.ajax("/products/" + id, {
     "dataType":"script",
     "data": $(".product_list_element_selected input").serialize()
   });
 };
 
-var edit = function(id) {
+function edit(id) {
   $.ajax("/products/" + id + "/edit", {
     "dataType":"script",
     "data": $(".product_list_element_selected input").serialize()
   });
 };
 
-var remove = function(id) {
+function remove(id) {
   $.ajax("/products/" + id, {
     "type":"DELETE",
     "dataType":"script",
@@ -23,7 +23,7 @@ var remove = function(id) {
   });
 };
 
-var uploadProductName = function(evt, inp, id) {
+function uploadProductName(evt, inp, id) {
   var keyCode = null;
 
   if( evt.which ) {
